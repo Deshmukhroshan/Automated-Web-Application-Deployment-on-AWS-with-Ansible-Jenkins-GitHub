@@ -58,7 +58,8 @@ Optional: Monitor instances using Node Exporter and Prometheus, with alerts via 
 | **Slack**       | Deployment notifications via webhook/email    |
 
 
-🧩 Project Breakdown:
+🧩 Project Breakdown: ##
+
 ✅ Phase 1: Basic EC2 & Apache Deployment
 Used Ansible to create EC2 instance.
 
