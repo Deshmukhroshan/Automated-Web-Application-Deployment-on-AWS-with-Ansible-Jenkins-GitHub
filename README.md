@@ -1,0 +1,2 @@
+# Automated-Web-Application-Deployment-on-AWS-with-Ansible-Jenkins-GitHub
+This project demonstrates a complete DevOps pipeline for deploying a multi-tier web application on AWS using Ansible, Jenkins, and GitHub. The solution automates the provisioning, configuration, and deployment of infrastructure and application components, integrating CI/CD workflows and infrastructure-as-code (IaC) principles.
