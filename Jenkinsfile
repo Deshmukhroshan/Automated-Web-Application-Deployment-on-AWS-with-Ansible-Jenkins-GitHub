@@ -9,20 +9,18 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/Deshmukhroshan/Automated-Web-Application-Deployment-on-AWS-with-Ansible-Jenkins-GitHub.git'
+                git branch: 'main', url: 'https://github.com/Deshmukhroshan/Automated-Web-Application-Deployment-on-AWS-with-Ansible-Jenkins-GitHub.git'
             }
         }
 
         stage('Provision EC2') {
             steps {
                 script {
-                    // Run ansible-playbook and capture the IP from debug output
                     def output = sh(
                         script: "ansible-playbook ec2-create.yml",
                         returnStdout: true
                     ).trim()
 
-                    // Extract the IP from output (look for debug line)
                     def match = output =~ /EC2 Public IP: ([0-9.]+)/
                     if (match) {
                         env.EC2_PUBLIC_IP = match[0][1]
