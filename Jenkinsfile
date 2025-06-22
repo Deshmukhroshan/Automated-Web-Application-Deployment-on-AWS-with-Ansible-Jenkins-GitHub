@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/ansible-aws-phase1.git'
+                git 'https://github.com/Deshmukhroshan/Automated-Web-Application-Deployment-on-AWS-with-Ansible-Jenkins-GitHub.git'
             }
         }
 
