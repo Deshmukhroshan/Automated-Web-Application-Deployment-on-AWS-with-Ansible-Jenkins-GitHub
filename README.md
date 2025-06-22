@@ -1,25 +1,26 @@
-# Automated-Web-Application-Deployment-on-AWS-with-Ansible-Jenkins-GitHub
-This project demonstrates a complete DevOps pipeline for deploying a multi-tier web application on AWS using Ansible, Jenkins, and GitHub. The solution automates the provisioning, configuration, and deployment of infrastructure and application components, integrating CI/CD workflows and infrastructure-as-code (IaC) principles.
+# 🔧 AWS Infrastructure Automation using Ansible, Jenkins, and GitHub
 
-🎯Key Objectives:
-Provision AWS infrastructure (EC2 instances, RDS) using Ansible modules.
+## 📘 Project Overview
 
-Deploy a multi-tier web application: Nginx (frontend), Flask (backend), MySQL (RDS).
+This project demonstrates a complete DevOps pipeline to provision and deploy a multi-tier web application on AWS using **Ansible**, **Jenkins**, and **GitHub**. It automates infrastructure provisioning, application deployment, and integrates CI/CD workflows using Infrastructure as Code (IaC) principles.
 
-Create modular, reusable roles using Ansible for configuration management.
+---
 
-Integrate with Jenkins for automated CI/CD pipeline.
+## 🎯 Objectives
 
-Manage codebase and version control through GitHub.
+- Provision EC2 instances and RDS on AWS using Ansible.
+- Deploy a web app stack: Nginx (frontend), Flask (backend), MySQL (RDS).
+- Create Ansible roles for modular configuration management.
+- Set up Jenkins for continuous integration and deployment.
+- Integrate GitHub for source control and webhooks.
+- Use dynamic inventory to target AWS instances.
+- (Optional) Enable monitoring with Prometheus and alerts via Slack.
 
-Enable GitHub webhooks to trigger Jenkins on code updates.
+---
 
-Implement dynamic inventory with AWS EC2 instances.
+## 🧱 Architecture
 
-Optional: Monitor instances using Node Exporter and Prometheus, with alerts via Slack.
-
-🧱 Architecture Overview:
-
+```text
              ┌─────────────┐
              │  GitHub Repo│
              └────┬────────┘
@@ -43,54 +44,28 @@ Optional: Monitor instances using Node Exporter and Prometheus, with alerts via 
        │ MySQL DB  │
        └───────────┘
 
-## 🧰 Technologies Used
+🧰 Technologies Used
 
-| Tool           | Purpose                                        |
-|----------------|------------------------------------------------|
-| **Ansible**     | Infrastructure provisioning & configuration   |
-| **AWS**         | Cloud infrastructure (EC2, RDS, VPC)          |
-| **Jenkins**     | CI/CD pipeline for automated deployment       |
-| **GitHub**      | Source control and webhook integration        |
-| **Python/Flask**| Backend application                           |
-| **Nginx**       | Reverse proxy / frontend server               |
-| **MySQL**       | Relational database via AWS RDS               |
-| **Prometheus**  | Monitoring system                             |
-| **Slack**       | Deployment notifications via webhook/email    |
+| Tool             | Purpose                                     |
+| ---------------- | ------------------------------------------- |
+| **Ansible**      | Infrastructure provisioning & configuration |
+| **AWS**          | Cloud infrastructure (EC2, RDS, VPC)        |
+| **Jenkins**      | CI/CD pipeline for automated deployment     |
+| **GitHub**       | Source control and webhook integration      |
+| **Python/Flask** | Backend application                         |
+| **Nginx**        | Reverse proxy / frontend server             |
+| **MySQL**        | Relational database via AWS RDS             |
+| **Prometheus**   | Monitoring system                           |
+| **Slack**        | Deployment notifications via webhook/email  |
 
 
-🧩 Project Breakdown: ##
 
-✅ Phase 1: Basic EC2 & Apache Deployment
-Used Ansible to create EC2 instance.
+📂 Folder Structure
 
-Installed Apache and served a static HTML page.
-
-✅ Phase 2: Jenkins CI/CD Integration
-Setup Jenkins pipeline to pull code from GitHub.
-
-Trigger Ansible playbooks on code push via webhooks.
-
-✅ Phase 3: Multi-Tier Deployment with Roles
-Created separate Ansible roles for Nginx, Flask, and MySQL.
-
-Deployed backend app on EC2 and configured Nginx as a reverse proxy.
-
-Used dynamic inventory to target EC2 instances by tags.
-
-✅ Phase 4: Monitoring & Alerting (Optional)
-Installed Node Exporter via Ansible.
-
-Integrated Prometheus and Alertmanager for metrics and alerts.
-
-Configured Slack notifications for deployment success/failure.
-
-📂 Repo Structure (Sample)
-lua
-Copy
-Edit
 ansible-aws-webapp/
 ├── Jenkinsfile
 ├── inventory/
+│   └── aws_ec2.yaml
 ├── roles/
 │   ├── nginx/
 │   ├── flask/
@@ -99,4 +74,6 @@ ansible-aws-webapp/
 │   ├── ec2-create.yml
 │   ├── deploy.yml
 ├── templates/
+│   ├── nginx.conf.j2
+│   └── app.service.j2
 └── README.md
