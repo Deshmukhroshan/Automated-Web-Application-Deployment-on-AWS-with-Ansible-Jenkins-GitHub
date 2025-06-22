@@ -44,6 +44,11 @@ Optional: Monitor instances using Node Exporter and Prometheus, with alerts via 
        └───────────┘
 
 ⚙️ Technologies Used:
+
+| Tool | Purpose |
+| — — — | — — — — — -|
+| Ansible | Infrastructure provisioning & configuration |
+| R2C1 | R2C2 |
 Tool	                          Purpose
 
 Ansible	                  Infrastructure provisioning & configuration \
@@ -54,7 +59,7 @@ Python/Flask	            Backend application \
 Nginx	                    Reverse proxy / frontend server \
 MySQL	                    Relational database via AWS RDS \
 Prometheus                Monitoring \
-Slack                     Email	Notifications \
+Slack                     Email	Notifications 
 
 🧩 Project Breakdown:
 ✅ Phase 1: Basic EC2 & Apache Deployment
