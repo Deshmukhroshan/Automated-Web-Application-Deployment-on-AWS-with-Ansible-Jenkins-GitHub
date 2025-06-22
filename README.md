@@ -55,3 +55,45 @@ Nginx	                    Reverse proxy / frontend server
 MySQL	                    Relational database via AWS RDS
 Prometheus                Monitoring
 Slack                     Email	Notifications
+
+🧩 Project Breakdown:
+✅ Phase 1: Basic EC2 & Apache Deployment
+Used Ansible to create EC2 instance.
+
+Installed Apache and served a static HTML page.
+
+✅ Phase 2: Jenkins CI/CD Integration
+Setup Jenkins pipeline to pull code from GitHub.
+
+Trigger Ansible playbooks on code push via webhooks.
+
+✅ Phase 3: Multi-Tier Deployment with Roles
+Created separate Ansible roles for Nginx, Flask, and MySQL.
+
+Deployed backend app on EC2 and configured Nginx as a reverse proxy.
+
+Used dynamic inventory to target EC2 instances by tags.
+
+✅ Phase 4: Monitoring & Alerting (Optional)
+Installed Node Exporter via Ansible.
+
+Integrated Prometheus and Alertmanager for metrics and alerts.
+
+Configured Slack notifications for deployment success/failure.
+
+📂 Repo Structure (Sample)
+lua
+Copy
+Edit
+ansible-aws-webapp/
+├── Jenkinsfile
+├── inventory/
+├── roles/
+│   ├── nginx/
+│   ├── flask/
+│   └── mysql/
+├── playbooks/
+│   ├── ec2-create.yml
+│   ├── deploy.yml
+├── templates/
+└── README.md
