@@ -43,23 +43,20 @@ Optional: Monitor instances using Node Exporter and Prometheus, with alerts via 
        │ MySQL DB  │
        └───────────┘
 
-⚙️ Technologies Used:
+## 🧰 Technologies Used
 
-| Tool | Purpose |
-| — — — | — — — — — -|
-| Ansible | Infrastructure provisioning & configuration |
-| R2C1 | R2C2 |
-Tool	                          Purpose
+| Tool           | Purpose                                        |
+|----------------|------------------------------------------------|
+| **Ansible**     | Infrastructure provisioning & configuration   |
+| **AWS**         | Cloud infrastructure (EC2, RDS, VPC)          |
+| **Jenkins**     | CI/CD pipeline for automated deployment       |
+| **GitHub**      | Source control and webhook integration        |
+| **Python/Flask**| Backend application                           |
+| **Nginx**       | Reverse proxy / frontend server               |
+| **MySQL**       | Relational database via AWS RDS               |
+| **Prometheus**  | Monitoring system                             |
+| **Slack**       | Deployment notifications via webhook/email    |
 
-Ansible	                  Infrastructure provisioning & configuration \
-AWS	                      Cloud infrastructure(EC2, RDS, VPC) \
-Jenkins	                  CI/CD pipeline for automated deployment \
-GitHub	                  Source control and webhook integration \
-Python/Flask	            Backend application \
-Nginx	                    Reverse proxy / frontend server \
-MySQL	                    Relational database via AWS RDS \
-Prometheus                Monitoring \
-Slack                     Email	Notifications 
 
 🧩 Project Breakdown:
 ✅ Phase 1: Basic EC2 & Apache Deployment
